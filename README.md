@@ -4,6 +4,10 @@
 
 ---
 
+Estan los archivos en distintas ramas/brechas
+Frontend
+Backend
+
 ## 📌 Descripción
 
 Este repositorio contiene el backend de un proyecto de ejemplo que expone una API sencilla para obtener la lista de películas. Está escrito en **TypeScript** y usa **Express**, **SQLite** y utilidades modernas para desarrollo (por ejemplo, `tsx`, `nodemon`). Es ideal como plantilla para aprender a integrar una base de datos SQLite con una API REST minimalista.
