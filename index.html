@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFT Magic - Películas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-film"></i> GFT <span>Magic</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="movies.html">Películas</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="mylist.html">Mi Lista</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="nav-search-input" class="search-input" placeholder="Buscar películas...">
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+
+        <div class="user-profile" id="user-profile-container">
+            <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" style="background-image: url('http://localhost:3000/images/portada.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">Novedad</span>
+            <h1>Descubre la Magia del Cine</h1>
+            <p>Las mejores historias, los estrenos más esperados y los clásicos de siempre. Solo en GFT Magic.</p>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <main id="home-sections-container">
+        <div class="loading" style="padding: 10rem 0; text-align: center;">
+            <div class="spinner"></div>
+            <p>Preparando tus recomendaciones...</p>
+        </div>
+    </main>
+
+    <!-- Universes Section -->
+    <section class="universes-section" style="padding: 0 4% 4rem;">
+        <h2 class="genre-title">Categorías</h2>
+        <div id="universes-container" class="universes-grid"
+            style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+            <!-- filled by JS -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 GFT Magic. Todos los derechos reservados.</p>
+        <div class="socials">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

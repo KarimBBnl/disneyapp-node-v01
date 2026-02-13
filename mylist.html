@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Lista - GFT Magic</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration:none; color:inherit;">
+                <i class="fa-solid fa-film"></i> GFT <span>Magic</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="movies.html">Películas</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="mylist.html" class="active">Mi Lista</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="nav-search-input" class="search-input" placeholder="Buscar películas...">
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+
+        <div class="user-profile" id="user-profile-container">
+            <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Subtle version for My List) -->
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">Tu Colección</span>
+            <h1><i class="fa-solid fa-bookmark"></i> Mi Lista Personal</h1>
+            <p>Tus películas favoritas guardadas para ver más tarde. Revive tus mejores momentos.</p>
+        </div>
+    </header>
+
+    <!-- My List Content -->
+    <main class="movies-container">
+        <h2>Favoritos Guardados</h2>
+        <div id="favorites-grid" class="grid">
+            <!-- Se llenará con JavaScript -->
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Cargando tu lista...</p>
+            </div>
+        </div>
+
+        <div id="empty-list" class="empty-state"
+            style="display:none; flex-direction: column; align-items: center; justify-content: center; padding: 5rem 2rem; text-align: center; gap: 1.5rem; opacity: 0.7;">
+            <i class="fa-solid fa-folder-open" style="font-size: 5rem; color: var(--text-secondary);"></i>
+            <h2>Tu lista está vacía</h2>
+            <p>Explora nuestro catálogo y añade películas pulsando el botón "Añadir a mi lista".</p>
+            <a href="index.html" class="btn btn-primary" style="display:inline-flex; width:auto; margin-top:1rem;">Ver
+                Catálogo</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 GFT Magic. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script src="mylist.js"></script>
+</body>
+
+</html>

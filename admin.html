@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - GFT Magic</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-film"></i> GFT <span>Magic</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#" class="active">Panel Admin</a></li>
+            <li><a href="series.html">Series</a></li>
+        </ul>
+        <div class="user-profile">
+            <div class="avatar">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="Admin">
+            </div>
+        </div>
+    </nav>
+
+    <main class="admin-container">
+        <div class="admin-header">
+            <h1><i class="fa-solid fa-code"></i> Editor Maestro (Bulk Edit)</h1>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="fetchRawData()">
+                    <i class="fa-solid fa-rotate"></i> Recargar Datos
+                </button>
+                <button class="btn btn-primary" onclick="saveBulkData()">
+                    <i class="fa-solid fa-cloud-arrow-up"></i> Actualizar Todo
+                </button>
+            </div>
+        </div>
+
+        <div class="bulk-editor-container">
+            <div class="editor-instructions">
+                <p><i class="fa-solid fa-circle-info"></i> Edita los datos abajo. Cada bloque representa una película.
+                    Puedes añadir nuevas al final siguiendo el mismo formato.</p>
+                <input type="text" id="admin-search" placeholder="Filtrar por título..." oninput="filterText()">
+            </div>
+            <textarea id="bulk-textarea" spellcheck="false" placeholder="Cargando base de datos..."></textarea>
+            <div id="editor-status" class="status-bar">Listo</div>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
