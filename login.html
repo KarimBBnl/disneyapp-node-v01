@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso - GFT Magic</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="auth-page">
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration:none; color:inherit;">
+                <i class="fa-solid fa-film"></i> GFT <span>Magic</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fa-solid fa-user-lock"></i>
+                <h1 id="auth-title">Iniciar Sesión</h1>
+                <p id="auth-subtitle">Bienvenido de nuevo a la magia</p>
+            </div>
+
+            <form id="login-form">
+                <div class="form-group" id="name-field" style="display:none;">
+                    <label for="name">Nombre Completo</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="name" placeholder="Tu nombre">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-at"></i>
+                        <input type="text" id="username" required placeholder="nombre_usuario">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" id="password" required placeholder="••••••••">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="auth-btn">
+                    Acceder ahora
+                </button>
+
+                <div class="auth-footer">
+                    <p id="toggle-text">¿No tienes cuenta? <a href="#" id="toggle-auth">Regístrate aquí</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>

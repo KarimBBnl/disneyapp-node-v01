@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando... - GFT Magic</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-film"></i> GFT <span>Magic</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="movies.html">Películas</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="mylist.html">Mi Lista</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="nav-search-input" class="search-input" placeholder="Buscar películas...">
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+
+        <div class="user-profile" id="user-profile-container">
+            <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+        </div>
+    </nav>
+
+    <!-- Movie Detail View -->
+    <main id="movie-detail" class="movie-detail-view">
+        <div class="back-nav">
+            <a href="index.html" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+        <div class="movie-detail-container">
+            <!-- Content filled by JS -->
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Preparando cine...</p>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <section id="reviews-section" class="reviews-section">
+            <div class="reviews-container">
+                <div class="reviews-header">
+                    <h2><i class="fa-regular fa-comments"></i> Reseñas de la Comunidad</h2>
+                    <span id="reviews-count" class="reviews-count">0 opiniones</span>
+                </div>
+
+                <div id="review-form-container">
+                    <!-- Form filled by JS if logged in -->
+                </div>
+
+                <div id="reviews-list" class="reviews-list">
+                    <div class="loading-reviews">
+                        <div class="spinner-small"></div>
+                        <p>Cargando opiniones...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 GFT Magic. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script src="movie.js"></script>
+</body>
+
+</html>

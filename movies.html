@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFT Magic - Catálogo Completo</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-film"></i> GFT <span>Magic</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="movies.html" class="active">Películas</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="mylist.html">Mi Lista</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="nav-search-input" class="search-input" placeholder="Buscar películas...">
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+
+        <div class="user-profile" id="user-profile-container">
+            <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" style="background-image: url('https://images7.alphacoders.com/131/1314915.jpeg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag" id="movies-count-tag">Lanzada recientemente</span>
+            <h1>Transformers One 2024</h1>
+            <p id="movies-welcome-msg">¡La batalla por Cybertron comienza ahora! Descubre el origen de Optimus y
+                Megatron.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="window.location.href='movie.html?slug=transformers_one'"><i
+                        class="fa-solid fa-play"></i> Ver ahora</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Library Section -->
+    <main class="movies-container" id="library-section">
+        <div class="library-header" style="display: flex; align-items: center; gap: 2.5rem; margin-bottom: 2.5rem;">
+            <h2 style="margin-bottom: 0; border-left: none; padding-left: 0;">Biblioteca</h2>
+
+            <!-- cool genres button -->
+            <div class="genres-filter-container">
+                <div class="genres-btn">
+                    <i class="fa-solid fa-layer-group"></i> Géneros
+                </div>
+                <div class="genres-list-expand" id="genres-list">
+                    <!-- filled by JS -->
+                </div>
+            </div>
+
+            <!-- custom sort dropdown -->
+            <div class="custom-dropdown" id="sort-dropdown">
+                <div class="dropdown-trigger" onclick="toggleDropdown('sort-options')">
+                    <i class="fa-solid fa-arrow-down-wide-short"></i>
+                </div>
+                <div class="dropdown-menu" id="sort-options">
+                    <div class="dropdown-item" onclick="selectSort('name-asc', 'Nombre (A-Z)')">Nombre (A-Z)</div>
+                    <div class="dropdown-item" onclick="selectSort('name-desc', 'Nombre (Z-A)')">Nombre (Z-A)</div>
+                    <div class="dropdown-item" onclick="selectSort('year-desc', 'Más recientes')">Más recientes</div>
+                    <div class="dropdown-item" onclick="selectSort('year-asc', 'Más antiguas')">Más antiguas</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="movies-grid" class="grid">
+            <div class="loading" style="padding: 10rem 0; text-align: center;">
+                <div class="spinner"></div>
+                <p>Cargando biblioteca completa...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 GFT Magic. Todos los derechos reservados.</p>
+        <div class="socials">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script src="movies.js"></script>
+</body>
+
+</html>
